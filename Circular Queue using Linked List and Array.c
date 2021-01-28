@@ -1,11 +1,3 @@
-//Name- Arnab Das
-//Dept- CSE
-//Year- 2nd
-//Roll No- 17
-//Assignment- 17
-//Question- 1
-//Date- 28/01/21
-
 #include<stdio.h>
 #include<stdlib.h>
 #define n 5

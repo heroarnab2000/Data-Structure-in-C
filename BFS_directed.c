@@ -1,9 +1,11 @@
+// Breadth-First-Search for directed graph
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int n, adj[20][20], queue[20], visit[20], front=0, rear=-1;
 
-void display()
+void display() // function to display the graph on depth first basis
 {
 	int i, j, k = 0;
 	
@@ -27,20 +29,20 @@ void display()
 	}
 }
 
-void bfs(int v)
+void bfs(int v) // recursive function that traverses the graph in Depth First order
 {
 	int i;
 	
 	for (i = 1; i <= n; i++)
 	{
-		if (adj[v][i] && !visit[i])
-		queue[++rear] = i;
+		if (adj[v][i] && !visit[i]) // checks if the vertex, we are about to visit is not already visited
+		queue[++rear] = i;          // visits the vertex and enters in the queue or further exploration of its connected vertices
 	}
 	
 	if (front <= rear)
 	{
 		visit[queue[front]] = 1;
-		bfs (queue[front++]);
+		bfs (queue[front++]);      // recursive call of the function
 	}
 }
 
